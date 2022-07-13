@@ -1,0 +1,162 @@
+@use './variables' as *;
+@use './mixins' as mixin;
+
+
+// Global styles
+html {
+ font-size: 1.1rem;
+
+ @include mixin.media-breakpoint(md) {
+  font-size: 1.2rem;
+ }
+
+ @include mixin.media-breakpoint(lg) {
+  font-size: 1.3rem;
+ }
+}
+
+
+body {
+ font-family: $body-font-family;
+ color: $body-color;
+ background-color: $main-dark-color;
+}
+
+
+main {
+ background-color: $main-light-color;
+ border-bottom-right-radius: $border-radius;
+ border-bottom-left-radius: $border-radius;
+ overflow-x: hidden;
+}
+
+
+// Section Intro
+header {
+ background-color: $main-light-color;
+ border-top-right-radius: $border-radius;
+ border-top-left-radius: $border-radius;
+
+ nav {
+  a {
+   color: $body-color;
+   font-size: 1rem;
+  }
+ }
+}
+
+.h1-line-break::before {
+ content: '\a';
+ white-space: pre;
+}
+
+h1 {
+ .marta {
+  font-family: $contrast-font-family;
+  background: -webkit-linear-gradient(left, $accent-1-color 50%, $accent-2-color 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -o-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
+ }
+}
+
+.contact:hover {
+ filter: invert(45%) sepia(65%) saturate(5750%) hue-rotate(335deg) brightness(107%) contrast(100%);
+}
+
+.scrolldown {
+ position: absolute;
+ right: 0.4rem;
+ top: 32rem;
+ line-height: 1;
+ letter-spacing: 0.2rem;
+ -webkit-transform: rotate(-90deg);
+ -moz-transform: rotate(-90deg);
+ -ms-transform: rotate(-90deg);
+ -o-transform: rotate(-90deg);
+ transform: rotate(-90deg);
+
+ @include mixin.media-breakpoint(md) {
+  z-index: 999;
+ }
+
+ @include mixin.media-breakpoint(lg) {
+  top: 24rem;
+ }
+
+ .arrow {
+  -webkit-animation: bounce 1500ms ease infinite;
+  -moz-animation: bounce 1500ms ease infinite;
+  animation: bounce 1500ms ease infinite;
+ }
+}
+
+@keyframes bounce {
+ 0% {
+  transform: translateX(0);
+ }
+
+ 50% {
+  transform: translateX(-1rem);
+ }
+
+ 100% {
+  transform: translateX(0);
+ }
+}
+
+
+// Section Portfolio
+
+h2 {
+ color: $accent-1-color;
+}
+
+.card {
+ box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1) inset, 0rem 0.4rem 1rem 0.2rem $shadow-color;
+
+ .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8rem;
+  padding: 3rem;
+
+  .card-img {
+   object-fit: scale-down;
+  }
+ }
+
+ .card-body {
+  a.card-link {
+   color: $accent-1-color;
+  }
+ }
+
+ .card-body {
+  a.card-link.code {
+   color: $accent-2-color;
+  }
+ }
+
+ .coming-soon-header {
+
+  .coming-soon-text {
+   z-index: 999;
+   color: #ff414e;
+   font-family: 'Barrio', cursive;
+  }
+
+  .coming-soon-img {
+   z-index: 998;
+   left: 30%;
+   max-height: 100%;
+  }
+ }
+}

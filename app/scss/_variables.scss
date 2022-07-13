@@ -1,0 +1,26 @@
+// breakpoints
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+//Colors
+$main-light-color: #F8E66A;
+$main-dark-color: #f8ce46;
+$accent-1-color: #ff414e;
+$accent-2-color: #ff8928;
+$shadow-color: #d89002;
+$body-color: #000;
+
+
+//Typography
+$body-font-family: 'Barlow Semi Condensed',
+  sans-serif;
+$contrast-font-family: 'Barrio', cursive;
+
+
+// border  radius
+$border-radius: 2rem;
