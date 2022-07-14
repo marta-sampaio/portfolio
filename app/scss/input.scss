@@ -25,23 +25,29 @@ body {
 
 main {
  background-color: $main-light-color;
- border-bottom-right-radius: $border-radius;
- border-bottom-left-radius: $border-radius;
  overflow-x: hidden;
+
+ @include mixin.media-breakpoint(sm) {
+  border-bottom-right-radius: $border-radius;
+  border-bottom-left-radius: $border-radius;
+ }
 }
 
 
 // Section Intro
 header {
  background-color: $main-light-color;
- border-top-right-radius: $border-radius;
- border-top-left-radius: $border-radius;
 
- nav {
-  a {
-   color: $body-color;
-   font-size: 1rem;
-  }
+ @include mixin.media-breakpoint(sm) {
+  border-top-right-radius: $border-radius;
+  border-top-left-radius: $border-radius;
+ }
+}
+
+nav {
+ a {
+  color: $body-color;
+  font-size: 1rem;
  }
 }
 
@@ -119,7 +125,7 @@ h2 {
 }
 
 .card {
- box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1) inset, 0rem 0.4rem 1rem 0.2rem $shadow-color;
+ box-shadow: 0 0 1.5rem $shadow-secondary-color inset, 0rem 0.4rem 1rem 0.2rem $shadow-main-color;
 
  .card-header {
   display: flex;
@@ -144,19 +150,18 @@ h2 {
    color: $accent-2-color;
   }
  }
+}
 
- .coming-soon-header {
+.coming-soon-header {
+ .coming-soon-text {
+  z-index: 999;
+  color: $accent-1-color;
+  font-family: 'Barrio', cursive;
+ }
 
-  .coming-soon-text {
-   z-index: 999;
-   color: #ff414e;
-   font-family: 'Barrio', cursive;
-  }
-
-  .coming-soon-img {
-   z-index: 998;
-   left: 30%;
-   max-height: 100%;
-  }
+ .coming-soon-img {
+  z-index: 998;
+  left: 30%;
+  max-height: 120%;
  }
 }

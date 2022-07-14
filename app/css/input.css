@@ -20,17 +20,26 @@ body {
 
 main {
   background-color: #F8E66A;
-  border-bottom-right-radius: 2rem;
-  border-bottom-left-radius: 2rem;
   overflow-x: hidden;
+}
+@media only screen and (min-width: 576px) {
+  main {
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+  }
 }
 
 header {
   background-color: #F8E66A;
-  border-top-right-radius: 2rem;
-  border-top-left-radius: 2rem;
 }
-header nav a {
+@media only screen and (min-width: 576px) {
+  header {
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+  }
+}
+
+nav a {
   color: #000;
   font-size: 1rem;
 }
@@ -120,14 +129,15 @@ h2 {
 .card .card-body a.card-link.code {
   color: #ff8928;
 }
-.card .coming-soon-header .coming-soon-text {
+
+.coming-soon-header .coming-soon-text {
   z-index: 999;
   color: #ff414e;
   font-family: "Barrio", cursive;
 }
-.card .coming-soon-header .coming-soon-img {
+.coming-soon-header .coming-soon-img {
   z-index: 998;
   left: 30%;
-  max-height: 100%;
+  max-height: 120%;
 }
 /*# sourceMappingURL=input.css.map */
