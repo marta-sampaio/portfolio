@@ -69,8 +69,8 @@ h1 .marta {
 
 .scrolldown {
   position: absolute;
-  right: 0.4rem;
-  top: 32rem;
+  right: -1.8rem;
+  top: 28rem;
   line-height: 1;
   letter-spacing: 0.2rem;
   -webkit-transform: rotate(-90deg);
@@ -79,14 +79,16 @@ h1 .marta {
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 576px) {
   .scrolldown {
     z-index: 999;
+    top: 32rem;
+    right: 0.4rem;
   }
 }
 @media only screen and (min-width: 992px) {
   .scrolldown {
-    top: 24rem;
+    top: 25rem;
   }
 }
 .scrolldown .arrow {
